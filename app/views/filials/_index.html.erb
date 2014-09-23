@@ -1,0 +1,8 @@
+<% @filials.each do |filial| %>
+  <tr>
+    <td><%= filial.name %></td>
+
+    <td><%= link_to "Редактировать", edit_filial_path(filial), remote: true, class: "btn" %></td>
+    <td><%= link_to "Удалить", filial_delete_path(filial), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

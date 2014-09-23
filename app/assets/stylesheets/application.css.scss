@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
+
+@media screen and (min-width: 1240px)  {
+.container {
+	max-width: 1000px;
+ }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.container {
+	width: 100%;
+ }
+}
+
+body {
+	background-color: #EAEEF0;
+}
+
+h1,h2,h3,h4,h5 {
+	color: #00345F !important;
+}
+
+.pad {
+	padding: 15px;
+}
+
+.news {
+	background-color: #E6F5F7;
+}
+
+.teamlist {
+	background-color: #D5EEF1;
+	padding: 15px;
+}
+
+.custom-text {
+	padding: 15px;
+}
+
+.control-group {
+	margin-bottom: 10px;
+}
+
+.center {
+	background-color: #E6F5F7;
+	width: 100%;
+	float: left;
+	height: 130px;
+	padding: 25px;
+}
+
+.contactBox {
+	height: 500px;
+	background-color: #fff;
+	padding: 25px;
+}
+
+#mainB {
+	min-height: 800px;
+}

@@ -1,0 +1,11 @@
+<div class="modal-header">
+  <h3>Удалить филиал</h3>
+</div>
+<div class="modal-body">
+<ul class="errors"></ul>
+Вы действительно хотите удалить <b><%= @filial.name %></b>?
+</div>
+<div class="modal-footer">
+  <%= link_to "Да, удалить филиал", filial_path(@filial), method: :delete, remote: true, class: "btn btn-danger" %>
+  <%= link_to "Нет, я нечайно", "#", class: "btn", data: { dismiss: "modal" } %>
+</div>

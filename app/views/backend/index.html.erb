@@ -1,0 +1,40 @@
+<br><br>
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li class="active"><a href="#" data-target-id="home"><i class="fa fa-home fa-fw"></i>Главная</a></li>
+                <li><a href="#" data-target-id="posts"><i class="fa fa-list-alt fa-fw"></i>Новости и статьи</a></li>
+                <li><a href="#" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i>Загрузить документы</a></li>
+                <li><a href="#" data-target-id="charts"><i class="fa fa-user-md fa-fw"></i>Сотрудники</a></li>
+                <li><a href="#" data-target-id="table"><i class="fa fa-hospital-o fa-fw"></i>Филиалы</a></li>
+                <li><a href="#" data-target-id="page"><i class="fa fa-cogs fa-fw"></i>Настройка страниц</a></li>
+
+       
+            </ul>
+        </div>
+        <div class="col-md-9 well admin-content" id="home">
+            <div class="jumbotron">
+            </div>
+           
+        </div>
+        <div class="col-md-9 well admin-content" id="posts">
+            <%=render 'posts' %>
+        </div>
+        <div class="col-md-9 well admin-content" id="pages">
+            <%=render 'documents' %>
+            
+        </div>
+        <div class="col-md-9 well admin-content" id="charts">
+            <%=render 'people' %>
+            
+        </div>
+        <div class="col-md-9 well admin-content" id="table">
+            <%=render 'filials' %>
+            
+        </div>
+
+        <div class="col-md-9 well admin-content" id="page">
+            <%=render 'editpage' %>
+        </div>
+
+    </div>

@@ -1,0 +1,9 @@
+<% @documents.each do |document| %>
+  <tr>
+    <td><%= document.name %></td>
+    <td><%= document.download_link %></td>
+
+    <td><%= link_to "Редактировать", edit_document_path(document), remote: true, class: "btn" %></td>
+    <td><%= link_to "Удалить", document_delete_path(document), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

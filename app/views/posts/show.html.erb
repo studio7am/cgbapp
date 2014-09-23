@@ -1,0 +1,42 @@
+<div id="page">
+
+
+<div class="center">
+  <h2><%= @post.title%></h2>
+</div>
+
+
+
+
+<div class="pageContent">
+<div class="contentLeft">
+  <div class="custom-text">
+  <%= raw @post.content%>
+
+</div>
+	
+
+</div>
+
+<div class="contentRight pad news">
+  <h3>Другие новости</h3>
+
+        <% @posts.each do |post|  %>
+
+                          <div class="post">
+                            <h4><%= post.title %></h4>
+                            <div class="post-date"><a href="/posts/<%= post.id %>"><img src="/images/postlink.png"></a> 
+                             <%= post.created_at.to_s(:ru_datetime) %>   </div>
+                            <p><%= truncate(strip_tags(post.content), length: 82) %></p>
+                        </div>
+                        <hr>
+        <% end %>
+        <hr>
+ 
+</div>
+</div>
+
+
+
+
+</div>

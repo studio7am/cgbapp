@@ -1,0 +1,37 @@
+
+     
+ <!--ЧАСЫ РАБОТЫ-->
+                <div class="asideWidget">
+                    <h3>Часы работы филиалов:</h3>
+                    
+                    <% @filials.each do |filial| %>
+                    
+                    <h4><%= filial.name %></h4>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 ">
+                            <p>Понедельник</p>
+                            <p>Вторник</p>
+                            <p>Среда</p>
+                            <p>Четверг</p>
+                            <p>Пятница</p>
+                            <p>Суббота</p>
+                            <p>Воскресенье</p>
+
+                       </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 text-left">
+                            <p><%= filial.pn %></p>
+                            <p><%= filial.vt %></p>
+                            <p><%= filial.sr %></p>
+                            <p><%= filial.ch %></p>
+                            <p><%= filial.pt %></p>
+                            <p><%= filial.sb %></p>
+                            <p><%= filial.vs %></p>
+                         </div>
+                    </div>   
+                 <% end %>
+             </div>
+
+<!--/asideWidget-->
+
+        
+   

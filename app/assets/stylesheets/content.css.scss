@@ -1,0 +1,139 @@
+.content {
+	background-color: #fff;
+	width: 65%;
+	float: left;
+	padding-bottom: 12px;
+	margin: 0;
+}
+aside {
+	width: 35%;
+	float: left;
+	background-color: #fff;
+	min-height: 335px;
+	padding: 10px;
+
+}
+
+.latest {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+.heading {
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #003449;
+
+}
+
+.post {
+  color: #1C4A5D;
+  height: 110px;
+
+  .post-date {
+    padding-bottom: 5px;
+  }
+}
+
+.line {
+   .post {
+    border-right: 1px solid #333;
+   }
+}
+
+.asideWidget {
+	padding-left: 15px;
+	p {
+		font-size: 12px;
+	}
+}
+
+.promo {
+  height: 150px;
+  background-color: #ACF1BD;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  h3 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    width: 350px;
+    text-transform: uppercase; 
+    font-size: 28px;
+  }
+}
+
+
+    .link {
+     width: 100%; /* Ширина слоя */
+     height: 150px; /* Высота слоя */
+     background: #EFFB41; /* Цвет фона */
+     padding-top: 50px;
+     &:hover {
+      background-color: #ACF1BD;
+     }
+    }
+
+
+
+    .link-pay {
+     background: #003449;
+     width: 100%; /* Ширина слоя */
+     height: 150px; /* Высота слоя */
+     padding-top: 50px;
+     &:hover {
+      background-color: #ACF1BD;
+     }
+    }
+
+    .link-pay a {
+     display: block; /* Ссылка как блочный элемент */
+     text-align: center; /* Выравнивание по центру */
+     height: 100%; /* Высота на весь слой */
+     color: #fff; /* Цвет ссылки */
+     font-size: 26px;
+     &:hover {
+      text-decoration: none;
+     }
+       &:active {
+      text-decoration: none;
+      outline: none;
+     }
+       &:focus {
+      text-decoration: none;
+      outline: none;
+     }
+    }
+
+    .link a {
+     display: block; /* Ссылка как блочный элемент */
+     text-align: center; /* Выравнивание по центру */
+     height: 100%; /* Высота на весь слой */
+     color: #666; /* Цвет ссылки */
+     font-size: 26px;
+     &:hover {
+      text-decoration: none;
+     }
+       &:active {
+      text-decoration: none;
+      outline: none;
+     }
+       &:focus {
+      text-decoration: none;
+      outline: none;
+     }
+    }
+
+
+
+.bottom {
+	.left {
+		width: 65%;
+		float: left;
+	}
+	.right {
+		width: 35%;
+		float: left;
+	}
+}

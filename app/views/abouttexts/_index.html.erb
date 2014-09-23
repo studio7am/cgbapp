@@ -1,0 +1,7 @@
+<% @abouttexts.each do |abouttext| %>
+  <tr>
+    <td><%= abouttext.title %></td>
+
+    <td><%= link_to "Редактировать", edit_abouttext_path(abouttext), remote: true, class: "btn" %></td>
+  </tr>
+<% end %>

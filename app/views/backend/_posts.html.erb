@@ -1,0 +1,23 @@
+  <div class="well">
+    <%= link_to "Добавить новость", new_post_path, remote: true, class: "btn btn-info" %>
+  </div>
+  <div class="new-post"></div>
+  
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Заголовок</th>
+        <th>Контент</th>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </thead>
+    <tbody class="post-index">
+      <%= render "indexP" %>
+    </tbody>
+  </table>
+<div id="post-modal" class="modal fade">
+<div class="modal-dialog">
+<div id="inner-post-modal" class="modal-content"></div>
+</div>
+</div>

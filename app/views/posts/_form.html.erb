@@ -1,0 +1,20 @@
+<%= form_for @post, remote: true, html: { class: "form-horizontal", style: "display:inline;" } do |f| %>
+  <div class="modal-body">
+    <ul class="errors"></ul>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_field :title, class: 'form-control', placeholder: 'Заголовок' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.cktext_area :content, :ckeditor => {:uiColor => '#333333', :toolbar => 'mini'} %>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to "Отменить", "#", class: "btn", data: {dismiss: "modal"} %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<%= form_for @person, remote: true, html: { class: "form-horizontal", style: "display:inline;" } do |f| %>
+  <div class="modal-body">
+    <ul class="errors"></ul>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Имя' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_area :content, class: 'form-control', placeholder: 'Несколько слов о сотруднике' %>
+      </div>
+    </div>
+  <div class="control-group">
+      <div class="controls">
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+       </div>
+    </div>
+  </div>
+    
+  <div class="modal-footer">
+    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to "Отменить", "#", class: "btn", data: {dismiss: "modal"} %>
+  </div>
+<% end %>

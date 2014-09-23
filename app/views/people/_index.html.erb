@@ -1,0 +1,9 @@
+<% @people.each do |person| %>
+  <tr>
+    <td><%= person.name %></td>
+    <td><%= person.content %></td>
+
+    <td><%= link_to "Редактировать", edit_person_path(person), remote: true, class: "btn" %></td>
+    <td><%= link_to "Удалить", person_delete_path(person), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

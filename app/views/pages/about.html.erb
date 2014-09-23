@@ -1,0 +1,79 @@
+<div id="page">
+
+
+<div class="left">
+	<h2>О нас</h2>
+</div>
+
+<div class="right">
+   <img src="images/slide1.jpg" class="img-responsive">
+   <img src="images/slide2.jpg" class="img-responsive">
+</div>
+
+
+<div class="pageContent">
+<div class="contentLeft">
+  <div class="custom-text">
+  <tbody>
+    <% @abouttexts.each do |abouttext| %>
+        <h3><%= abouttext.title %></h3>
+        <%= raw abouttext.content %>
+
+    <% end %>
+</div>
+	
+  <div class="teamlist">
+	<h3>Заведующие отделениями</h3>
+
+	<div class="row">
+
+
+   <% @people.each do |person| %>
+    <div class="person col-lg-4 text-center">
+       <!--img src="<%= person.avatar %>" class="img-circle img-responsive"-->
+       
+
+       <img src="http://placehold.it/100x100" class="img-circle">
+       <h4><%= person.name %></h4>
+       <p><%= raw person.content %></p>
+   </div>
+ <% end %>
+</div>
+<h3>ВАКАНСИИ</h3>
+    <% @jobs.each do |job| %>
+        <a href="<%= job.dwnld %>">Скачать документ</a>
+
+    <% end %>
+
+ </div>
+</div>
+
+<div class="contentRight pad news">
+  <h3>Свежие новости</h3>
+
+        <% @posts.each do |post|  %>
+
+                          <div class="post">
+                            <h4><%= post.title %></h4>
+                            <div class="post-date"><a href="/posts/<%= post.id %>"><img src="images/postlink.png"></a> 
+                             <%= post.created_at.to_s(:ru_datetime) %>   </div>
+                            <p><%= truncate(strip_tags(post.content), length: 82) %></p>
+                        </div>
+                        <hr>
+        <% end %>
+        <hr>
+        <h3>Нормативные документы</h3>
+<hr>
+    <% @documents.each do |document| %>
+        <h4><%= document.name %></h4>
+        <p><small><%= document.description %></small></p>
+        <a href="<%= document.download_link %>" target="blank">Скачать</a></td>
+      
+    <% end %>
+</div>
+</div>
+
+
+
+
+</div>

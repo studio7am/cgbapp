@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Админка</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="http://bootswatch.com/flatly/bootstrap.css">
+</head>
+<body>
+
+<header id="header-backend">
+	<div class="container">
+		<h1>Админка</h1>
+		<p>Управление новостями, загрузка документов, редактирование сотрудников и другое.</p>
+		<a href="http://localhost:3000" target="_blank" class="btn btn-info btn-xs">На сайт</a>
+    </div>
+</header>
+
+<main id ="mainB" class="container">
+
+<%= yield %>
+
+</main>
+
+<script type="text/javascript">
+
+$(document).ready(function()
+{
+    var navItems = $('.admin-menu li > a');
+    var navListItems = $('.admin-menu li');
+    var allWells = $('.admin-content');
+    var allWellsExceptFirst = $('.admin-content:not(:first)');
+    
+    allWellsExceptFirst.hide();
+    navItems.click(function(e)
+    {
+        e.preventDefault();
+        navListItems.removeClass('active');
+        $(this).closest('li').addClass('active');
+        
+        allWells.hide();
+        var target = $(this).attr('data-target-id');
+        $('#' + target).show();
+    });
+});
+
+</script>
+</body>
+</html>

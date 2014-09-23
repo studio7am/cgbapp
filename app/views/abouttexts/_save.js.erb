@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @abouttext.errors.any? %>
+  <% @abouttext.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".abouttext-index").html("<%= escape_javascript(render 'index') %>")
+  $("#abouttext-modal").modal("hide")
+<% end %>

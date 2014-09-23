@@ -1,0 +1,32 @@
+/* #SLIDER */
+
+.sssprev {
+  display: none;
+}
+.sssnext {
+  display: none;
+}
+.caption {
+  text-transform: uppercase;
+  position: relative;
+  top: -150px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 330px;
+  height: 150px;
+  padding: 30px;
+  big {
+    font-size: 28px;
+    font-weight: 400;
+    color: #003449;
+    line-height: 80%;
+    margin-bottom: 5px;
+  }
+  small {
+    color: #003449;
+    font-size: 16px;
+  }
+}
+.slider {
+  height: 350px;
+  margin: 0;
+}

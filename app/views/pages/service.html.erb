@@ -1,0 +1,38 @@
+<div id="page">
+
+<div class="left">
+	<h2>Отделения</h2>
+</div>
+
+<div class="right">
+   <img src="images/slide1.jpg" class="img-responsive">
+   <img src="images/slide2.jpg" class="img-responsive">
+</div>
+<!--ОТДЕЛЕНИЯ-->
+<div class="pageContent">
+
+
+
+
+
+<div class="col4">
+	<h3>Список отделений</h3>
+    <ul class="nav nav-pills nav-stacked admin-menu">
+        <% @otds.each do |otd| %>
+            <li><a href="#" data-target-id="<%= otd.id %>"><%= otd.name %></a></li>
+        <% end %>
+            </ul>
+          <hr>
+      </div>
+        <% @otds.each do |otd| %>
+
+        <div class="col8  admin-content" id="<%= otd.id %>">
+          <h3>Информация об отделении "<%= otd.name %>"</h3>
+           <%= raw otd.content %>
+        </div>
+        <% end %>
+
+
+  </div>
+ </div>
+</div>

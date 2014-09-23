@@ -1,0 +1,27 @@
+<h1>Listing otds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @otds.each do |otd| %>
+      <tr>
+        <td><%= otd.name %></td>
+        <td><%= otd.content %></td>
+        <td><%= link_to 'Show', otd %></td>
+        <td><%= link_to 'Edit', edit_otd_path(otd) %></td>
+        <td><%= link_to 'Destroy', otd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Otd', new_otd_path %>

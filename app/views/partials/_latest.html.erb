@@ -1,0 +1,30 @@
+
+
+               <!--ПОСЛЕДНИЕ НОВОСТИ-->
+               <div class="latest">
+                <div class="heading">Свежие новости</div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 line">
+                        <% @posts.each do |post|  %>
+
+                          <div class="post">
+                            <div class="post-date"><a href="/posts/<%= post.id %>"><img src="images/postlink.png"></a> 
+                             <%= post.created_at.to_s(:ru_datetime) %>   </div>
+                            <p><%= truncate(strip_tags(post.content), length: 82) %></p>
+                        </div>
+                            <% end %>
+               
+                     </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <% @items.each do |post|  %>
+
+                          <div class="post">
+                            <div class="post-date"><a href="/posts/<%= post.id %>"><img src="images/postlink.png"></a> 
+                             <%= post.created_at.to_s(:ru_datetime) %>   </div>
+                            <p><%= truncate(strip_tags(post.content), length: 82) %></p>
+                        </div>
+                            <% end %>
+                    </div>
+
+
+                </div>
+                <!--/КОНЕЦ ПОСЛЕДНИХ НОВОСТЕЙ-->

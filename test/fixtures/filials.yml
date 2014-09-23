@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  pn: MyString
+  vt: MyString
+  sr: MyString
+  ch: MyString
+  pt: MyString
+  sb: MyString
+  vs: MyString
+
+two:
+  name: MyString
+  pn: MyString
+  vt: MyString
+  sr: MyString
+  ch: MyString
+  pt: MyString
+  sb: MyString
+  vs: MyString

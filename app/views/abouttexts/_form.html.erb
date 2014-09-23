@@ -1,0 +1,26 @@
+<%= form_for @abouttext, remote: true, :html => {:multipart => true} do |f| %>
+
+  <div class="modal-body">
+    <ul class="errors"></ul>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_field :title, class: 'form-control', placeholder: 'Заголовок' %>
+      </div>
+    </div>
+   
+     <div class="control-group">
+      <div class="controls">
+        <%= f.text_area :content, class: 'form-control', placeholder: 'Текст' %>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <div class="modal-footer">
+    <%= f.submit 'Отправить', class: "btn btn-primary" %>
+    <%= link_to "Отменить", "#", class: "btn", data: {dismiss: "modal"} %>
+  </div>
+<% end %>

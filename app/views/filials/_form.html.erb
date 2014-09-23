@@ -1,0 +1,26 @@
+<%= form_for @filial, remote: true, :html => {:multipart => true} do |f| %>
+
+  <div class="modal-body">
+    <ul class="errors"></ul>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Название' %>
+      </div>
+    </div>
+        <%= f.text_field :pn, class: 'form-control', placeholder: 'Понедельник' %>
+        <%= f.text_field :vt, class: 'form-control', placeholder: 'Вторник' %>
+        <%= f.text_field :sr, class: 'form-control', placeholder: 'Среда' %>
+        <%= f.text_field :ch, class: 'form-control', placeholder: 'Четверг' %>
+        <%= f.text_field :pt, class: 'form-control', placeholder: 'Пятница' %>
+        <%= f.text_field :sb, class: 'form-control', placeholder: 'Суббота' %>
+        <%= f.text_field :vs, class: 'form-control', placeholder: 'Воскресенье' %>
+
+
+
+  </div>
+  <div class="modal-footer">
+    <%= f.submit 'Отправить', class: "btn btn-primary" %>
+    <%= link_to "Отменить", "#", class: "btn", data: {dismiss: "modal"} %>
+  </div>
+<% end %>
