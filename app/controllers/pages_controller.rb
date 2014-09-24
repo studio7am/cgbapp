@@ -13,11 +13,6 @@ class PagesController < ApplicationController
     @documents = Document.all
     @jobs = Job.all
     @abouttexts = Abouttext.all
-    
-    
-    
-
-
   end
 
   def help

@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+group :development do
+  gem 'sqlite3', '1.3.8'
+end
+
 gem 'ckeditor'
 gem 'mini_magick'
 gem 'carrierwave'
@@ -32,7 +34,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'russian', '~> 0.6.0'
 # Use unicorn as the app server
 # gem 'unicorn'
-
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
