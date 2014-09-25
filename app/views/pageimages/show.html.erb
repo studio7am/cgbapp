@@ -1,14 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @pageimage.name %>
-</p>
+
 
 <p>
-  <strong>Pgimg:</strong>
-  <%= @pageimage.pgimg %>
+<img src="<%= @pageimage.pgimg %>" class="img-responsive">
 </p>
 
-<%= link_to 'Edit', edit_pageimage_path(@pageimage) %> |
-<%= link_to 'Back', pageimages_path %>
+<%= link_to 'Изменить', edit_pageimage_path(@pageimage) %> |
+<%= link_to 'Назад', backend_path %>

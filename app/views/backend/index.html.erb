@@ -8,7 +8,7 @@
                 <li><a href="#" data-target-id="people"><i class="fa fa-user-md fa-fw"></i>Сотрудники</a></li>
                 <li><a href="#" data-target-id="filials"><i class="fa fa-hospital-o fa-fw"></i>Филиалы</a></li>
                 <li><a href="#" data-target-id="otds"><i class="fa fa-hospital-o fa-fw"></i>Отделения</a></li>
-                <li><a href="#" data-target-id="slider"><i class="fa fa-hospital-o fa-fw"></i>Слайдер</a></li>
+                <li><a href="#" data-target-id="slider"><i class="fa fa-laptop fa-fw"></i>Слайдер</a></li>
 
                 <li><a href="#" data-target-id="links"><i class="fa fa-hospital-o fa-fw"></i>Полезные ссылки</a></li>
 
@@ -41,11 +41,13 @@
             
         </div>
           <div class="col-md-9 well admin-content" id="otds">
-            Отделения
+            <%=render 'otds' %>
+            
         </div>
 
            <div class="col-md-9 well admin-content" id="slider">
-            slider
+            <%=render 'slider' %>
+            
         </div>
         <div class="col-md-9 well admin-content" id="links">
             <%=render 'links' %>

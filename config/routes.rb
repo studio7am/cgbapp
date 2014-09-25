@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
 
 
+
+
   resources :links
 
   resources :pageimages
 
-  resources :slides
-
-  resources :otds
-
   mount Ckeditor::Engine => '/ckeditor'
+  resources :slides do
+    get "delete"
+  end
+  resources :otds do
+    get "delete"
+  end
+
   resources :posts do
     get "delete"
   end

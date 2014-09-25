@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @otd.errors.any? %>
+  <% @otd.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".otd-index").html("<%= escape_javascript(render 'index') %>")
+  $("#otd-modal").modal("hide")
+<% end %>

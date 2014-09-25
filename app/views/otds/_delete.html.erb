@@ -1,0 +1,11 @@
+<div class="modal-header">
+  <h3>Удалить отделение</h3>
+</div>
+<div class="modal-body">
+<ul class="errors"></ul>
+Вы действительно хотите удалить <b><%= @otd.name %></b>?
+</div>
+<div class="modal-footer">
+  <%= link_to "Да, удалить отделение", otd_path(@otd), method: :delete, remote: true, class: "btn btn-danger" %>
+  <%= link_to "Нет, я нечайно", "#", class: "btn", data: { dismiss: "modal" } %>
+</div>

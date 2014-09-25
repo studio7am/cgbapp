@@ -1,66 +1,46 @@
 class SlidesController < ApplicationController
-  before_action :set_slide, only: [:show, :edit, :update, :destroy]
-
-  # GET /slides
-  # GET /slides.json
+  respond_to :html, :js
+  
   def index
     @slides = Slide.all
   end
 
-  # GET /slides/1
-  # GET /slides/1.json
   def show
+    @slide = Slide.find(params[:id])
+    @slides = Slide.all
+    @documents = Document.all
+    
   end
 
-  # GET /slides/new
   def new
     @slide = Slide.new
   end
 
-  # GET /slides/1/edit
-  def edit
-  end
-
-  # POST /slides
-  # POST /slides.json
   def create
-    @slide = Slide.new(slide_params)
-
-    respond_to do |format|
-      if @slide.save
-        format.html { redirect_to @slide, notice: 'Slide was successfully created.' }
-        format.json { render :show, status: :created, location: @slide }
-      else
-        format.html { render :new }
-        format.json { render json: @slide.errors, status: :unprocessable_entity }
-      end
-    end
+    @slides = Slide.all
+    @slide = Slide.create(slide_params)
   end
 
-  # PATCH/PUT /slides/1
-  # PATCH/PUT /slides/1.json
+  def edit
+    @slide = Slide.find(params[:id])
+  end
+
   def update
-    respond_to do |format|
-      if @slide.update(slide_params)
-        format.html { redirect_to @slide, notice: 'Slide was successfully updated.' }
-        format.json { render :show, status: :ok, location: @slide }
-      else
-        format.html { render :edit }
-        format.json { render json: @slide.errors, status: :unprocessable_entity }
-      end
-    end
+    @slides = Slide.all
+    @slide = Slide.find(params[:id])
+    
+    @slide.update_attributes(slide_params)
   end
 
-  # DELETE /slides/1
-  # DELETE /slides/1.json
+  def delete
+    @slide = Slide.find(params[:slide_id])
+  end
+
   def destroy
+    @slides = Slide.all
+    @slide = Slide.find(params[:id])
     @slide.destroy
-    respond_to do |format|
-      format.html { redirect_to slides_url, notice: 'Slide was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_slide

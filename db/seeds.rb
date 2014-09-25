@@ -50,7 +50,9 @@ Pageimage.create!([
   {id: 5, name: "helpone", pgimg: "/demo/1.jpg"},
   {id: 6, name: "helptwo", pgimg: "/demo/2.jpg"},
   {id: 7, name: "contactone", pgimg: "/demo/1.jpg"},
-  {id: 8, name: "contacttwo", pgimg: "/demo/2.jpg"}
+  {id: 8, name: "contacttwo", pgimg: "/demo/2.jpg"},
+  {id: 9, name: "helpplus", pgimg: "/demo/2.jpg"}
+
 
 
 

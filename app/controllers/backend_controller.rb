@@ -7,12 +7,18 @@ class BackendController < ApplicationController
     @filials = Filial.all
     @abouttexts = Abouttext.all
     @links = Link.all
+    @otds = Otd.all
+    @slides = Slide.all
+    
+
     @pageaboutimagesone = Pageimage.where(:name => 'aboutone')
     @pageaboutimagestwo = Pageimage.where(:name => 'abouttwo')
     
 
     @pagehelpimagesone = Pageimage.where(:name => 'helpone')
     @pagehelpimagestwo = Pageimage.where(:name => 'helptwo')
+    @pagehelpimagesplus = Pageimage.where(:name => 'helpplus')
+
 
     @pagecontactimagesone = Pageimage.where(:name => 'contactone')
     @pagecontactimagestwo = Pageimage.where(:name => 'contacttwo')

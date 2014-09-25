@@ -3,6 +3,8 @@ class PagesController < ApplicationController
     @posts = Post.order("created_at desc").limit(3)
     @items = Post.order("created_at asc").limit(3)
     @filials = Filial.all
+    @slides = Slide.all
+    
 
     
   end
@@ -22,6 +24,8 @@ class PagesController < ApplicationController
     @links = Link.all
     @pagehelpimagesone = Pageimage.where(:name => 'helpone')
     @pagehelpimagestwo = Pageimage.where(:name => 'helptwo')
+    @pagehelpimagesplus = Pageimage.where(:name => 'helpplus')
+
     
   end
 

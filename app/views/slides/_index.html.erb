@@ -1,0 +1,9 @@
+<% @slides.each do |slide| %>
+  <tr>
+    <td><%= slide.name %></td>
+    <td><img src="<%= slide.slimg %>"></td>
+
+    <td><%= link_to "Редактировать", edit_slide_path(slide), remote: true, class: "btn" %></td>
+    <td><%= link_to "Удалить", slide_delete_path(slide), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

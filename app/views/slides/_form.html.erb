@@ -1,25 +1,22 @@
-<%= form_for(@slide) do |f| %>
-  <% if @slide.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@slide.errors.count, "error") %> prohibited this slide from being saved:</h2>
+<%= form_for @slide, remote: true, html: { class: "form-horizontal", style: "display:inline;" } do |f| %>
+  <div class="modal-body">
+    <ul class="errors"></ul>
 
-      <ul>
-      <% @slide.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Название' %>
+      </div>
     </div>
-  <% end %>
+    <div class="control-group">
+      <div class="controls">
+      <%= f.file_field :slimg  %>
+      <%= f.hidden_field :slimg_cache %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :slimg %><br>
-    <%= f.text_field :slimg %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="modal-footer">
+    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to "Отменить", "#", class: "btn", data: {dismiss: "modal"} %>
   </div>
 <% end %>

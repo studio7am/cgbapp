@@ -74,6 +74,12 @@
         <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
       </tr>
     <% end %>
+    <% @pagehelpimagesplus.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 

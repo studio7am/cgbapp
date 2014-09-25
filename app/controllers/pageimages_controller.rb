@@ -30,7 +30,7 @@ class PageimagesController < ApplicationController
 
     respond_to do |format|
       if @pageimage.save
-        format.html { redirect_to @pageimage, notice: 'Pageimage was successfully created.' }
+        format.html { redirect_to @pageimage, notice: 'Изображение успешно загружено' }
         format.json { render :show, status: :created, location: @pageimage }
       else
         format.html { render :new }

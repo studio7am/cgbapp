@@ -1,0 +1,9 @@
+<% @otds.each do |otd| %>
+  <tr>
+    <td><%= otd.name %></td>
+    <td><%= otd.content %></td>
+
+    <td><%= link_to "Редактировать", edit_otd_path(otd), remote: true, class: "btn" %></td>
+    <td><%= link_to "Удалить", otd_delete_path(otd), remote: true, class: "btn btn-danger" %></td>
+  </tr>
+<% end %>

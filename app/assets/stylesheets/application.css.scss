@@ -75,3 +75,23 @@ h1,h2,h3,h4,h5 {
 #mainB {
 	min-height: 800px;
 }
+
+.foo {
+	height: 350px;
+}
+.footerLeft {
+	background-color: #fff;
+	float: left;
+	width: 65%;
+	padding: 10px;
+}
+.footerRight {
+	float: left;
+	width: 35%;
+	background-color: #fff;
+	padding: 10px;
+}
+
+.prew {
+	width: 150px;
+}

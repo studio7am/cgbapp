@@ -49,6 +49,8 @@
             </div>
           </fieldset>
           </form>
+
+          
   <h3>Полезные ссылки</h3>
 
   <div class="links">
@@ -73,7 +75,9 @@
         <img src="images/o.png">
             Записаться на прием</a>
        </div>
-       <img src="http://placehold.it/400x300" class="img-responsive">
+    <% @pagehelpimagesplus.each do |pageimage| %>
+        <img src="<%= pageimage.pgimg %>" class="img-responsive">
+    <% end %>
 <div class="link-pay">
         <a href="/" target="_blank">
             Платные услуги<br><small>Скачать прайс</small></a>
