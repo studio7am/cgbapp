@@ -4,9 +4,11 @@
   <title>Батайск</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= controller_name %>" class="<%= action_name %>">
+  
 
 <header id="header">
 	<div class="container">
@@ -29,7 +31,16 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    
 </div>
 
+<script type="text/javascript">
 
+$(document).ready(function() {
+  if ($("#controller").length) {
+    // Your specific controller code here
+  }
+})
+
+
+</script>
 <script type="text/javascript">
 
 $(document).ready(function()
