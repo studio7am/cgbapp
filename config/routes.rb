@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  resources :links
+
+  resources :pageimages
+
+  resources :slides
+
   resources :otds
 
   mount Ckeditor::Engine => '/ckeditor'

@@ -1,0 +1,108 @@
+<div class="imgonpages">
+<h2>Изображения на страницах</h2>
+<hr>
+<h3>"О нас"</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pageaboutimagesone.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+     <% @pageaboutimagestwo.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<hr>
+<h3>"Отделения"</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pageserviceimagesone.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+     <% @pageserviceimagestwo.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+<h3>"Пациенту в помощь"</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pagehelpimagesone.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+     <% @pagehelpimagestwo.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+<h3>"Контакты"</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pagecontactimagesone.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+     <% @pagecontactimagestwo.each do |pageimage| %>
+      <tr>
+        <td><img src="<%= pageimage.pgimg %>" class="thumbnail miniImg"></td>
+        <td><%= link_to 'Изменить изображение', edit_pageimage_path(pageimage), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+</div>

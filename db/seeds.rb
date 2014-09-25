@@ -40,3 +40,18 @@ Otd.create!([
   {id: 3, name: "Гинекология", content: "Это текст. Кликните дважды, чтобы отредактировать и рассказать посетителям о себе."}
 ])
 
+
+Pageimage.delete_all
+Pageimage.create!([
+  {id: 1, name: "aboutone", pgimg: "/demo/1.jpg"},
+  {id: 2, name: "abouttwo", pgimg: "/demo/1.jpg"},
+  {id: 3, name: "serviceone", pgimg: "/demo/1.jpg"},
+  {id: 4, name: "servicetwo", pgimg: "/demo/2.jpg"},
+  {id: 5, name: "helpone", pgimg: "/demo/1.jpg"},
+  {id: 6, name: "helptwo", pgimg: "/demo/2.jpg"},
+  {id: 7, name: "contactone", pgimg: "/demo/1.jpg"},
+  {id: 8, name: "contacttwo", pgimg: "/demo/2.jpg"}
+
+
+
+])

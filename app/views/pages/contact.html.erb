@@ -5,8 +5,12 @@
 </div>
 
 <div class="right">
-   <img src="images/slide1.jpg" class="img-responsive">
-   <img src="images/slide2.jpg" class="img-responsive">
+    <% @pagecontactimagesone.each do |pageimage| %>
+        <img src="<%= pageimage.pgimg %>" class="img-responsive">
+    <% end %>
+    <% @pagecontactimagestwo.each do |pageimage| %>
+        <img src="<%= pageimage.pgimg %>" class="img-responsive">
+    <% end %>
 </div>
 
 <div class="pageContent">

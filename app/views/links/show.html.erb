@@ -1,0 +1,13 @@
+
+<p>
+  <strong>Описание:</strong>
+  <%= @link.name %>
+</p>
+
+<p>
+  <strong>Адрес:</strong>
+  <%= @link.url %>
+</p>
+
+<%= link_to 'Редактировать', edit_link_path(@link) %> |
+<%= link_to 'Назад', backend_path %>

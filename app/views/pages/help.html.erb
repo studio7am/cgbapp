@@ -5,8 +5,12 @@
 </div>
 
 <div class="right">
-   <img src="images/slide1.jpg" class="img-responsive">
-   <img src="images/slide2.jpg" class="img-responsive">
+    <% @pagehelpimagesone.each do |pageimage| %>
+        <img src="<%= pageimage.pgimg %>" class="img-responsive">
+    <% end %>
+    <% @pagehelpimagestwo.each do |pageimage| %>
+        <img src="<%= pageimage.pgimg %>" class="img-responsive">
+    <% end %>
 </div>
 
 <div class="pageContent">
@@ -46,6 +50,20 @@
           </fieldset>
           </form>
   <h3>Полезные ссылки</h3>
+
+  <div class="links">
+
+    <% @links.each do |link| %>
+      <div class="col-lg-4 col-md-3 col-sm-4 col-xs-4">
+        <p><%= link.name %></p>
+        <a href="<%= link.url %>" target="_blank">Перейти</a>          
+        <% end %>
+      </div>
+
+
+
+
+  </div>
 
 </div>
 

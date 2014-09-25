@@ -4,3 +4,5 @@
 
 
 
+$(document).on "page:before-unload", ->
+  $(".slider").sss()

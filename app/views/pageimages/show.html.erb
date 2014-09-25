@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pageimage.name %>
+</p>
+
+<p>
+  <strong>Pgimg:</strong>
+  <%= @pageimage.pgimg %>
+</p>
+
+<%= link_to 'Edit', edit_pageimage_path(@pageimage) %> |
+<%= link_to 'Back', pageimages_path %>
