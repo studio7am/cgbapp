@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.order(:name)
   end
 
   # GET /users/1
@@ -24,19 +24,15 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
-        # Сказать UserMailer отослать приветственное письмо после сохранения
-        # UserMailer.welcome_email(@user).deliver_later # (Rails 4.2)
-        UserMailer.welcome_email(@user).deliver     # (до Rails 4.2)
-
-
-        format.html { redirect_to(@user, notice: 'User was successfully created.') }
-        format.json { render json: @user, status: :created, location: @user }
+        format.html { redirect_to users_url,
+        notice: "Пользователь #{@user.name} был успешно создан." }
+        format.json { render :show, status: :created, location: @user }
       else
-        format.html { render action: 'new' }
+        format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -47,7 +43,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to users_url,
+        notice: "Сведения о пользователе #{@user.name} были обновлены." }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -59,6 +56,12 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+  begin
+  @user.destroy
+  flash[:notice] = "Пользователь #{@user.name} удален"
+   rescue Exception => e
+   flash[:notice] = e.message 
+   end
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
@@ -74,6 +77,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :login)
+      params.require(:user).permit(:name, :password_digest)
     end
 end

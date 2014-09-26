@@ -1,7 +1,8 @@
 class PeopleController < ApplicationController
-  layout 'backend'
+ layout 'backend'
+ skip_before_filter :verify_authenticity_token
+ 
  respond_to :html, :js
- skip_before_filter :verify_authenticity_token, :only => [:index, :show, :create]
   
   def index
     @people = Person.all
