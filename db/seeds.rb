@@ -53,8 +53,9 @@ Pageimage.create!([
   {id: 7, name: "contactone", pgimg: "/demo/1.jpg"},
   {id: 8, name: "contacttwo", pgimg: "/demo/2.jpg"},
   {id: 9, name: "helpplus", pgimg: "/demo/2.jpg"}
-
-
-
+])
+User.delete_all
+User.create!([
+  {id: 1, name: "admin", password: "secret", password_confirmation: "secret"}
 
 ])
