@@ -34,10 +34,9 @@
 
    <% @people.each do |person| %>
     <div class="person col-lg-4 text-center">
-       <!--img src="<%= person.avatar %>" class="img-circle img-responsive"-->
+       <img src="<%= person.avatar %>" class="img-circle">
        
 
-       <img src="http://placehold.it/100x100" class="img-circle">
        <h4><%= person.name %></h4>
        <p><%= raw person.content %></p>
    </div>
