@@ -1,5 +1,5 @@
 class DocumentsController < ApplicationController
-  layout 'backend'
+ layout 'backend'
  respond_to :html, :js
  skip_before_filter :verify_authenticity_token, :only => [:index, :show, :create]
 
