@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def about
     @people = Person.all
-    @posts = Post.order("created_at desc").limit(6)
+    @posts = Post.order("created_at desc").limit(4)
     @documents = Document.all
     @jobs = Job.all
     @abouttexts = Abouttext.all
