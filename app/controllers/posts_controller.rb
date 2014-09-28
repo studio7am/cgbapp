@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
+  skip_before_filter :authorize
+  
   respond_to :html, :js
   
   def index
     @posts = Post.all
     @filials = Filial.all
-    
+
   end
 
   def show
