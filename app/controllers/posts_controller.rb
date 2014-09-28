@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all
+    @filials = Filial.all
+    
   end
 
   def show

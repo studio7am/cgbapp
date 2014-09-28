@@ -59,7 +59,6 @@ end
   match '/contact', to: 'pages#contact', via: 'get'
   
   match '/backend', to: 'backend#index', via: 'get'
-  match '/backend/posts', to: 'backend#posts', via: 'get'
 
   
 
