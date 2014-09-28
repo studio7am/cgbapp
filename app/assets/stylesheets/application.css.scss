@@ -72,25 +72,18 @@ h1,h2,h3,h4,h5 {
 	padding: 25px;
 }
 
+#main {
+	background-color: #fff;
+	max-width: 970px;
+	padding: 0px;
+}
+
 #mainB {
 	min-height: 800px;
 }
 
-.foo {
-	height: 350px;
-}
-.footerLeft {
-	background-color: #fff;
-	float: left;
-	width: 65%;
-	padding: 10px;
-}
-.footerRight {
-	float: left;
-	width: 35%;
-	background-color: #fff;
-	padding: 10px;
-}
+
+
 
 .prew {
 	width: 150px;
@@ -98,4 +91,28 @@ h1,h2,h3,h4,h5 {
 
 .post-list {
 	padding: 30px;
+}
+
+#main .container {
+	background-color: #fff;
+}
+
+.foo {
+	margin: 0 auto;
+	width: 970px;
+	padding: 15px;
+	background-color: #fff;
+}
+
+.fooLeft {
+	background-color: #fff;
+	float: left;
+	width: 65%;
+	padding: 10px;
+}
+.fooRight {
+	float: left;
+	width: 35%;
+	background-color: #fff;
+	padding: 10px;
 }
