@@ -32,7 +32,12 @@ Filial.create!([
 Abouttext.delete_all
 Abouttext.create!([
   {id: 1, title: "Заголовок", content: "Этот текст с легкостью можно поменять в админке."},
+  {id: 2, title: "contactstext", content: "Этот текст с легкостью можно поменять в админке."}
+
 ])
+
+
+
 
 Otd.delete_all
 Otd.create!([

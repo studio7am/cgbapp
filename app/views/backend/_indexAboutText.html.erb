@@ -1,4 +1,14 @@
-<% @abouttexts.each do |abouttext| %>
+
+<h4>Текст на странице "О нас"</h4>
+
+<% @abouttexts1.each do |abouttext| %>
   
-    <%= link_to "Редактировать", edit_abouttext_path(abouttext), remote: true, class: "btn" %></td>
+    <%= link_to "Редактировать", edit_abouttext_path(abouttext), remote: true, class: "btn btn-danger btn-sm" %></td>
+<% end %>
+
+<hr>
+<h4>Текст на странице "Контакты"</h4>
+<% @contactstext.each do |abouttext| %>
+  
+    <%= link_to "Редактировать", edit_abouttext_path(abouttext), remote: true, class: "btn btn-danger btn-sm" %></td>
 <% end %>

@@ -26,6 +26,12 @@ class BackendController < ApplicationController
 
     @pageserviceimagesone = Pageimage.where(:name => 'serviceone')
     @pageserviceimagestwo = Pageimage.where(:name => 'servicetwo')
+
+
+    @abouttexts1 = Abouttext.where(:id => '1')
+    
+    @contactstext = Abouttext.where(:id => '2')
+
   
     
     

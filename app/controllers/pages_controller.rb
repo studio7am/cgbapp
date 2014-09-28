@@ -12,10 +12,13 @@ class PagesController < ApplicationController
 
   def about
     @people = Person.all
-    @posts = Post.order("created_at desc").limit(4)
+    @posts = Post.order("created_at desc").limit(5)
     @documents = Document.all
     @jobs = Job.all
-    @abouttexts = Abouttext.all
+    @abouttexts1 = Abouttext.where(:id => '1')
+    
+    @contactstext = Abouttext.where(:name => 'contactstext')
+
     @pageaboutimagesone = Pageimage.where(:name => 'aboutone')
     @pageaboutimagestwo = Pageimage.where(:name => 'abouttwo')
 
@@ -34,6 +37,7 @@ class PagesController < ApplicationController
     @filials = Filial.all
     @pagecontactimagesone = Pageimage.where(:name => 'contactone')
     @pagecontactimagestwo = Pageimage.where(:name => 'contacttwo')
+    @contactstext = Abouttext.where(:title => 'contactstext')
     
   end
 
