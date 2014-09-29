@@ -37,7 +37,7 @@ class PagesController < ApplicationController
     @filials = Filial.all
     @pagecontactimagesone = Pageimage.where(:name => 'contactone')
     @pagecontactimagestwo = Pageimage.where(:name => 'contacttwo')
-    @contactstext = Abouttext.where(:title => 'contactstext')
+    @contactstext = Abouttext.where(:id => '2')
     
   end
 
