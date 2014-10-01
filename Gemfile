@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-gem 'simple_form'
 gem 'contact_us', '~> 0.5.1'
 group :development do
   gem 'sqlite3', '1.3.8'

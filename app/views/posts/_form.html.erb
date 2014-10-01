@@ -7,11 +7,13 @@
         <%= f.text_field :title, class: 'form-control', placeholder: 'Заголовок' %>
       </div>
     </div>
-    <div class="control-group">
-      <div class="controls">
-        <%= f.cktext_area :content, :ckeditor => {:uiColor => '#333333', :toolbar => 'mini'} %>
-      </div>
-    </div>
+
+  
+        <%= f.cktext_area :content, class: 'form-control', placeholder: 'Текст' %>
+    
+
+
+
   </div>
   <div class="modal-footer">
     <%= f.submit class: "btn btn-primary" %>
