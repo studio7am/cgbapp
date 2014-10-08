@@ -9,6 +9,8 @@ class BackendController < ApplicationController
     @links = Link.all
     @otds = Otd.all
     @slides = Slide.all
+    @jobs = Job.all
+    
     
 
     @pageaboutimagesone = Pageimage.where(:name => 'aboutone')
