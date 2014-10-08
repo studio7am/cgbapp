@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+ layout 'backend'
+
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   # GET /jobs
@@ -28,7 +30,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.html { redirect_to backend_url, notice: 'Файл успешно создан.' }
         format.json { render :show, status: :created, location: @job }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class JobsController < ApplicationController
   def update
     respond_to do |format|
       if @job.update(job_params)
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
+        format.html { redirect_to @job, notice: 'Файл успешно обновлен.' }
         format.json { render :show, status: :ok, location: @job }
       else
         format.html { render :edit }
