@@ -116,3 +116,19 @@ h1,h2,h3,h4,h5 {
 	background-color: #fff;
 	padding: 10px;
 }
+
+.inv {
+	color: #333;
+	&:hover {
+		text-decoration: none;
+	}
+    &:focus {
+		text-decoration: none;
+		outline: none;
+	}
+	&:active {
+		text-decoration: none;
+		outline: none;
+		
+	}
+}
