@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   skip_before_filter :authorize
   def home
-    @posts = Post.order("created_at desc").limit(3)
-    @items = Post.order("created_at asc").limit(3)
+    @posts = Post.order("created_at desc").limit(5)
+    @items = Post.order("created_at asc").limit(5)
     @filials = Filial.all
     @slides = Slide.all
     
