@@ -1,4 +1,6 @@
 class BackendController < ApplicationController
+  before_filter :authorize
+    
   layout 'backend'
   def index
     @posts = Post.all
