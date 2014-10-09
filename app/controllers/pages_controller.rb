@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   def home
     @posts = Post.order("created_at desc").limit(5)
     @items = Post.order("created_at asc").limit(5)
-    @filials = Filial.order("created_at asc").limit(1)
-    @itemg = Filial.order("created_at desc").limit(9)
+    @filials = Filial.order("created_at asc").limit(3)
+    @itemg = Filial.order("created_at desc").limit(1)
 
     @slides = Slide.all
     
