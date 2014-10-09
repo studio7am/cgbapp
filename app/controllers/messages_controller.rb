@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+ layout 'backend'
+
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   # GET /messages
@@ -28,7 +30,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html { redirect_to help_url, notice: 'Сообщение успешно отправлено' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }

@@ -17,38 +17,71 @@
 <div class="contentLeft pad">
 	<h3>Задайте вопрос главному врачу</h3>
   <hr>
-          <form class="form-horizontal" action="" method="post">
-          <fieldset>
-    
+<p id="notice"><%= notice %></p>
+
+  <%= form_for(@message) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
             <!-- Name input-->
             <div class="form-group">
               <div class="col-md-12">
-                <input id="name" name="name" type="text" placeholder="Имя, фамилия" class="form-control">
+                  <%= f.text_field :name, class: 'form-control', placeholder: 'Ваше имя' %>
               </div>
             </div>
+         
+
+
     
             <!-- Email input-->
             <div class="form-group">
               <div class="col-md-12">
-                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+             <%= f.text_field :email, class: 'form-control', placeholder: 'email' %>
+             
               </div>
             </div>
     
-            <!-- Message body -->
+
+
+              <!-- Message body -->
             <div class="form-group">
               <div class="col-md-12">
-                <textarea class="form-control" id="message" name="message" placeholder="Ваше сообщение..." rows="5"></textarea>
+                <%= f.text_area :message, class: 'form-control', placeholder: 'Сообщение..' %>
               </div>
             </div>
-    
-            <!-- Form actions -->
+        
+
+
+                    <!-- Form actions -->
             <div class="form-group">
               <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-sm">Отправить</button>
+            <%= f.submit 'Отправить', class: 'btn btn-info' %>
+                
               </div>
             </div>
-          </fieldset>
-          </form>
+      
+
+
+
+<% end %>
+
+   
+    
+    
+          
+    
+    
+       
 
           
   <h3>Полезные ссылки</h3>

@@ -10,6 +10,8 @@ class BackendController < ApplicationController
     @otds = Otd.all
     @slides = Slide.all
     @jobs = Job.all
+    @messages = Message.all
+    
     
     
 

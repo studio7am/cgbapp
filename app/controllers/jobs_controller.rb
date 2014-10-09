@@ -30,7 +30,7 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to backend_url, notice: 'Файл успешно создан.' }
+        format.html { redirect_to backend_url, notice: 'Файл успешно созда.' }
         format.json { render :show, status: :created, location: @job }
       else
         format.html { render :new }

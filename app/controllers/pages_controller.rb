@@ -29,6 +29,9 @@ class PagesController < ApplicationController
     @pagehelpimagesone = Pageimage.where(:name => 'helpone')
     @pagehelpimagestwo = Pageimage.where(:name => 'helptwo')
     @pagehelpimagesplus = Pageimage.where(:name => 'helpplus')
+    @messages = Message.all
+    @message = Message.new
+    
 
     
   end
