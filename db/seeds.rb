@@ -1,3 +1,8 @@
+Job.delete_all
+Job.create!([
+  {id: 1 }
+
+])
 Person.delete_all
 Person.create!([
   {id: 1, name: "Быков", content: "Несколько слов о сотруднике"},
