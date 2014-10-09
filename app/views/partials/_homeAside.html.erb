@@ -5,7 +5,7 @@
                     <h3>Часы работы филиалов:</h3>
                     <hr>
                     
-                    <% @filials.each do |filial| %>
+                <% @filials.each do |filial| %>
                     
                     <h4><%= filial.name %></h4>
                     <div class="row">
@@ -30,9 +30,46 @@
                          </div>
                     </div>   
                  <% end %>
+
+                 <button>Toggle</button>
+<div class="spoiler">
+
+                          <% @itemg.each do |filial| %>
+                    
+                    <h4><%= filial.name %></h4>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 ">
+                            <p>Понедельник</p>
+                            <p>Вторник</p>
+                            <p>Среда</p>
+                            <p>Четверг</p>
+                            <p>Пятница</p>
+                            <p>Суббота</p>
+                            <p>Воскресенье</p>
+
+                       </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 text-left">
+                            <p><%= filial.pn %></p>
+                            <p><%= filial.vt %></p>
+                            <p><%= filial.sr %></p>
+                            <p><%= filial.ch %></p>
+                            <p><%= filial.pt %></p>
+                            <p><%= filial.sb %></p>
+                            <p><%= filial.vs %></p>
+                         </div>
+                    </div>   
+                 <% end %>
+</div>
+                 
              </div>
 
 <!--/asideWidget-->
 
-        
-   
+<script>
+$(document).ready(function(){
+  $('.spoiler').hide();
+});
+$( "button" ).click(function() {
+$( ".spoiler" ).slideToggle( "slow" );
+});
+</script>
