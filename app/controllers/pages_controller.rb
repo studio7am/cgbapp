@@ -33,6 +33,7 @@ class PagesController < ApplicationController
     @pagehelpimagesplus = Pageimage.where(:name => 'helpplus')
     @messages = Message.all
     @message = Message.new
+
     
 
     
@@ -43,6 +44,8 @@ class PagesController < ApplicationController
     @pagecontactimagesone = Pageimage.where(:name => 'contactone')
     @pagecontactimagestwo = Pageimage.where(:name => 'contacttwo')
     @contactstext = Abouttext.where(:id => '2')
+        @filials = Filial.order("created_at asc").limit(3)
+    @itemg = Filial.order("created_at desc").limit(6)
     
   end
 
