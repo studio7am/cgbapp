@@ -34,11 +34,36 @@
 
    <% @people.each do |person| %>
     <div class="person col-lg-4 col-md-4 col-sm-4 text-center">
-       <img src="<%= person.avatar %>" class="img-responsive">
        
 
        <h4><%= person.name %></h4>
        <p><%= raw person.content %></p>
+<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#<%= person.name %>">
+  Фотография
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="<%= person.name %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= person.name %></h4>
+      </div>
+      <div class="modal-body">
+       <img src="<%= person.avatar %>" class="img-responsive">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+
+
    </div>
  <% end %>
 </div>
