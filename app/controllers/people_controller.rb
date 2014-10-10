@@ -25,7 +25,6 @@ class PeopleController < ApplicationController
   end
 
   def update
-    @persons = Person.all
     @person = Person.find(params[:id])
     
     @person.update_attributes(person_params)
