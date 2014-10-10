@@ -11,17 +11,21 @@
                               <div class="post-title">
                               <%= post.title %>
                             </div>
-                               <a href="/posts/<%= post.id %>"><img src="images/postlink.png" class="ico-link"></a> 
+                               <a href="/posts/<%= post.id %>"></a> 
                               <%= post.created_at.to_s(:ru_datetime) %>   
                             </div>
                             <div class="post-content">
-                            <p><%= truncate(strip_tags(post.content), length: 92) %></p>
+                            <p><%= truncate(strip_tags(raw post.content), length: 92) %></p>
                           </div>
+                       
                         </div>
+                        <hr>
+                        
                             <% end %>
 
                      </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                      
+                      <div class="col-lg-6 col-md-6 col-sm-6">
                         <% @items.each do |post|  %>
 
                           <div class="post">
@@ -31,7 +35,7 @@
                             </div>
 
 
-                            <div class="post-date"><a href="/posts/<%= post.id %>"><img src="images/postlink.png" class="ico-link"> </a> 
+                            <div class="post-date"><a href="/posts/<%= post.id %>"></a> 
                              <%= post.created_at.to_s(:ru_datetime) %>   </div>
                             <div class="post-content">
 
