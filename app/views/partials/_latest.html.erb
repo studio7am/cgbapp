@@ -8,19 +8,25 @@
 
                           <div class="post">
                             <div class="post-date">
-                              <div class="post-title">
-                              <%= post.title %>
-                            </div>
-                               <a href="/posts/<%= post.id %>"></a> 
+                          
                               <%= post.created_at.to_s(:ru_datetime) %>   
                             </div>
+                                <div class="post-title">
+                              <%= post.title %>
+                            </div>
                             <div class="post-content">
-                            <p><%= truncate(strip_tags(raw post.content), length: 92) %></p>
+                           <%= truncate(strip_tags(raw post.content), length: 92) %>
+                          <br>
+                          <br>
+                          
+
+                      <p><a  class="btn btn-danger btn-xs" href="/posts/<%= post.id %>">Читать</a> </p>
+
                           </div>
                        
                         </div>
                         <hr>
-                        
+
                             <% end %>
 
                      </div>
@@ -29,18 +35,25 @@
                         <% @items.each do |post|  %>
 
                           <div class="post">
+                                <div class="post-date">
+                             <%= post.created_at.to_s(:ru_datetime) %>   
+                             </div>
                       
                             <div class="post-title">
                               <%= post.title %>
                             </div>
 
 
-                            <div class="post-date"><a href="/posts/<%= post.id %>"></a> 
-                             <%= post.created_at.to_s(:ru_datetime) %>   </div>
+                        
                             <div class="post-content">
 
-                            <p><%= truncate(strip_tags(post.content), length: 82) %></p>
+                          <%= truncate(strip_tags(raw post.content), length: 92) %>
+                          <br>
+                          <br>
+                            <p><a class="btn btn-danger btn-xs"  href="/posts/<%= post.id %>">Читать</a> </p>
+
                           </div>
+
 
                         </div>
                         <hr>

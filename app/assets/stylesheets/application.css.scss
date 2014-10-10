@@ -150,7 +150,8 @@ h1,h2,h3,h4,h5 {
 .post {
 	padding: 5px;
 	margin-bottom: 5px;	
-	height: 150px;
+	background-color: #fafafa;
+	min-height: 250px;
 }
 
 .post-title {
@@ -158,7 +159,8 @@ h1,h2,h3,h4,h5 {
 	padding-bottom: 10px;
 }
 .post-content {
-	background-color: #fafafa;
+	background-color: #fff;
+	padding: 5px;
 }
 
 .ico-link {
