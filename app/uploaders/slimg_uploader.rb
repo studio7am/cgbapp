@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class SlimgUploader < CarrierWave::Uploader::Base
+  permissions 0777
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -8,12 +9,21 @@ class SlimgUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :file
+  
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/slider/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    'public/up'
+  end
+
+  def cache_dir
+    '/tmp/cgbapp-cache'
+  end
+
+  def default_url
+    "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
