@@ -38,12 +38,12 @@
 
        <h4><%= person.name %></h4>
        <p><%= raw person.content %></p>
-<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#<%= person.name %>">
+<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#<%= person.id %>">
   Фотография
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="<%= person.name %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="<%= person.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
