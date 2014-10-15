@@ -1,21 +1,20 @@
 # encoding: utf-8
 
 class SlimgUploader < CarrierWave::Uploader::Base
-  permissions 0777
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :dropbox
   
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    'public/up'
+    '/public/up'
   end
 
   def cache_dir
