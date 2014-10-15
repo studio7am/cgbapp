@@ -10,7 +10,6 @@ gem 'ckeditor'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-dropbox'
-gem 'dotenv-rails', :groups => [:development, :test]
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
