@@ -9,6 +9,8 @@ end
 gem 'ckeditor'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'carrierwave-dropbox'
+
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all' # both FTP/SFTP
 
 # Use SCSS for stylesheets
